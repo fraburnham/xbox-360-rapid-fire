@@ -155,7 +155,13 @@ __interrupt void ADC10ISR(void) {
 When the ADC detects the trigger has been released it stops itself and the PWM. Then the comparator is reset to detect the next trigger pull.
 
 ## Installation
-In progress... Needs pictures...
+![Front view](images/IMG_20150211_122428.jpg?raw=true)
+
+Here you can see where the two trigger points are connected. The trace gets cut and a diode is used to bridge the gap. This prevents the PWM from feeding back into the ADC or comparator, causing false interrupts.
+
+![Rear view](images/IMG_20150211_122443.jpg?raw=true)
+
+This is where I was able to place the mod chip itself. I had planned to put it on top of the board, but couldn't make it fit. In the future it may be better/cleaner to go directly to the mcu on the controller itself.
 
 ## Configuration and use
 Use is fairly simple:
